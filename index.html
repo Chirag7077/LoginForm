@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <div class="loginbox">
+    <img src="avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <form name="loginForm" method = "POST" onsubmit="return validateForm()">
+            <p>Username</p>
+            <input type="text" id ="uname" name="uname" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" id = "passwrd" name="passwrd" placeholder="Enter Password">
+            <input type="submit" id="submitBtn" name="" value="Login">
+            <a href="#">Lost your password?</a><br>
+            <a href="#">Don't have an account?</a>
+        </form>
+        
+    </div>
+
+    <script>
+        function validateForm(){
+            var user = document.loginForm.uname.value;
+            var pass = document.loginForm.passwrd.value;
+            
+            if(user=="" || user==null){
+                alert("Username Cannot be Blank");
+                return false;
+            }
+
+            if(user=="Chirag" && pass=="chris7077"){
+                alert("Login Success");
+                return true;
+            }
+        }
+    
+    </script>
+
+</body>
+</head>
+</html>
